@@ -105,14 +105,14 @@
 .portal.active { animation: animated 0.5s steps(1) infinite; z-index: 3; }
 .portal.empty { background-position: -160px 0; z-index: 3; }
 
-.speed.active { animation: animated 0.5s steps(1) infinite; }
-.speed.empty { background-position: -160px 0; }
+.speedpad.active { animation: animated 0.5s steps(1) infinite; }
+.speedpad.empty { background-position: -160px 0; }
 
-.speedred.active { animation: animated 0.5s steps(1) infinite; }
-.speedred.empty { background-position: -160px 0; }
+.speedpadred.active { animation: animated 0.5s steps(1) infinite; }
+.speedpadred.empty { background-position: -160px 0; }
 
-.speedblue.active { animation: animated 0.5s steps(1) infinite; }
-.speedblue.empty { background-position: -160px 0; }
+.speedpadblue.active { animation: animated 0.5s steps(1) infinite; }
+.speedpadblue.empty { background-position: -160px 0; }
 
 .switching { animation: switch 1.2s steps(1) infinite; }
 .moving { animation: move 1.2s steps(1) infinite; z-index: 1; }
