@@ -1,0 +1,72 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container {
+    width: 750px;
+}
+
+h1 {
+    padding: 15px;
+}
+
+.column-container {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.column {
+    width: 49.5%;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.column:first-child {
+    border-right: 1px solid #eee;
+}
+
+.page-header ~ .page-header {
+    margin-top: 6px;
+    border-top: 1px solid #eee;
+}
+
+.tooltip * {
+    text-align: left;
+}
+
+.tooltip ul {
+    padding-left: 13px;
+    margin-bottom: 2px;
+}
+
+button {
+    margin-bottom: 5px !important;
+}
+
+.phantom {
+    visibility: hidden;
+}
+
+.button-container {
+    border-top: 1px solid #eee;
+    margin-top: 6px;
+    padding-top: 12px;
+    padding-right: 6px;
+}
+
+.file-input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+pre {
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+}

@@ -1,0 +1,110 @@
+<html ng-app="app">
+
+    <head>
+
+        <title>TagPro Texture Script Generator</title>
+
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css">
+
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/angular.min.js"></script>
+        <script src="libs/angular-sanitize.min.js"></script>
+        <script src="libs/bootstrap.min.js"></script>
+        <script src="libs/ui-bootstrap-tpls.min.js"></script>
+        <script src="libs/angular-clipboard.min.js"></script>
+        <script src="libs/jszip.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" type="text/css" href="style/preview.css">
+        <script src="script/main.js"></script>
+
+        <style id="tiles-style"></style>
+        <style id="portal-style"></style>
+        <style id="splats-style"></style>
+        <style id="speedpad-style"></style>
+        <style id="speedpadred-style"></style>
+        <style id="speedpadblue-style"></style>
+
+    </head>
+
+    <body ng-controller="MainController">
+        <div class="container">
+
+            <div class="page-header">
+                <h1>
+                    TagPro Texture Script Generator
+                    <br>
+                    <small><small>For GreaseMonkey and TamperMonkey</small></small>
+                </h1>
+            </div>
+
+            <div class="column-container">
+                <div class="column left-column">
+                    <h3>Upload Images</h3>
+                    <span class="help-block">Defaults are used when no file is provided</span>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('tiles')"
+                        ng-class="{ 'btn-success': isCustom.tiles }">
+                            Tiles
+                    </button>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('portal')"
+                        ng-class="{ 'btn-success': isCustom.portal }">
+                            Portals
+                    </button>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('splats')"
+                        ng-class="{ 'btn-success': isCustom.splats }">
+                            Splats
+                    </button>
+                    <br>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('speedpad')"
+                        ng-class="{ 'btn-success': isCustom.speedpad }">
+                            Pads
+                    </button>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('speedpadred')"
+                        ng-class="{ 'btn-success': isCustom.speedpadred }">
+                            Pads (red)
+                    </button>
+                    <button class="btn btn-xl btn-default" ng-click="uploadImage('speedpadblue')"
+                        ng-class="{ 'btn-success': isCustom.speedpadblue }">
+                            Pads (blue)
+                    </button>
+                </div>
+                <div class="column right-column ">
+                    <h3>Upload Archive</h3>
+                    <span class="help-block">Only supports .zip files</span>
+                    <button class="btn btn-xl btn-primary" ng-click="uploadArchive()"
+                        uib-tooltip-html="uploadTooltip" tooltip-placement="bottom">
+                            Upload
+                    </button>
+                    <br>
+                    <button class="btn btn-xl phantom">Spooky</button>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-xl btn-danger" ng-click="reset()">Reset to default</button>
+                <button class="btn btn-xl btn-info" ng-click="generate()">Generate script</button>
+            </div>
+
+            <div class="page-header">
+                <h1>
+                    Preview
+                    <br>
+                    <small>
+                        (updates automatically)
+                        <br>
+                        <small><small>yeah the walls look gross</small></small>
+                    </small>
+                </h1>
+            </div>
+
+            <div ng-include="'views/preview.html'"></div>
+
+            <input type="file" id="image-input" class="file-input" accept=".png" on-file-change="onImageUpload">
+            <input type="file" id="archive-input" class="file-input" accept=".zip" on-file-change="onArchiveUpload">
+
+        </div>
+    </body>
+
+</html>

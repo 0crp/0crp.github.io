@@ -1,0 +1,166 @@
+#preview {
+    margin: auto;
+    width: 720px;
+    font-size: 0;
+}
+
+#preview > div, #preview > div > div {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+#preview > div {
+    position: relative;
+}
+
+#preview > div > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.splats {
+    width: 120px !important;
+    height: 120px !important;
+    z-index: 1;
+}
+
+.pd {
+    top: 20px !important;
+    z-index: 1;
+}
+
+.b { background-position: -520px -160px; }
+
+.wt { background-position: -120px -400px; z-index: 3; }
+.wr { background-position: -440px -200px; }
+.wb { background-position: -320px -400px; }
+.wl { background-position: 0px -200px; }
+
+.wtl { background-position: -160px -120px; }
+.wtr { background-position: -280px -120px; }
+.wbl { background-position: -280px -400px; }
+.wbr { background-position: -160px -400px; }
+
+.wlnb { background-position: -160px -360px; }
+.wbnb { background-position: -80px -280px; }
+
+.wotr1 { background-position: -40px -240px; }
+.wotr2 { background-position: -120px -320px; }
+.wotr3 { background-position: -440px -240px; }
+
+.gw { background-position: -520px -120px; }
+.rw { background-position: -560px -120px; }
+.bw { background-position: -600px -120px; }
+
+.br { background-position: -560px 0px; }
+.bb { background-position: -600px 0px; }
+
+.bmb { background-position: -480px -40px; }
+.bmb2 { background-position: -480px -80px; }
+.spk { background-position: -480px 0px; z-index: 2; }
+.swt { background-position: -520px -240px; }
+
+.yflg { background-position: -520px -40px; }
+.rflg { background-position: -560px -40px; }
+.bflg { background-position: -600px -40px; }
+
+.jj { background-position: -480px -160px; }
+.rb { background-position: -480px -200px; }
+.tp { background-position: -480px -240px; }
+
+.ra { background-position: -560px -160px; }
+.ba { background-position: -600px -160px; }
+
+.rac { background-position: -560px -200px; }
+.bac { background-position: -600px -200px; }
+
+.spl1r {
+    background-position: -120px 0px;
+    left: -60px !important;
+    top: -15px !important;
+}
+
+.spl2r {
+    background-position: -360px 0px;
+    left: -25px !important;
+    top: -20px !important;
+}
+
+.spl1b {
+    background-position: -480px -120px;
+    left: -20px !important;
+    top: 15px !important;
+}
+
+.spl2b {
+    background-position: 0 -120px;
+    left: -60px !important;
+    top: 15px !important;
+}
+
+/* Animations */
+
+.portal.active { animation: animated 0.5s steps(1) infinite; z-index: 3; }
+.portal.empty { background-position: -160px 0; z-index: 3; }
+
+.speed.active { animation: animated 0.5s steps(1) infinite; }
+.speed.empty { background-position: -160px 0; }
+
+.speedred.active { animation: animated 0.5s steps(1) infinite; }
+.speedred.empty { background-position: -160px 0; }
+
+.speedblue.active { animation: animated 0.5s steps(1) infinite; }
+.speedblue.empty { background-position: -160px 0; }
+
+.switching { animation: switch 1.2s steps(1) infinite; }
+.moving { animation: move 1.2s steps(1) infinite; z-index: 1; }
+
+@-webkit-keyframes animated {
+    0% { background-position: 0px 0px; }
+    25% { background-position: -40px 0px; }
+    50% { background-position: -80px 0px; }
+    75% { background-position: -120px 0px; }
+}
+
+@keyframes animated {
+    0% { background-position: 0px 0px; }
+    25% { background-position: -40px 0px; }
+    50% { background-position: -80px 0px; }
+    75% { background-position: -120px 0px; }
+}
+
+@-webkit-keyframes switch {
+    0% { background-position: -480px -120px; }
+    25% { background-position: -600px -120px; }
+    87.5% { background-position: -480px -120px; }
+}
+
+@keyframes switch {
+    0% { background-position: -480px -120px; }
+    25% { background-position: -600px -120px; }
+    87.5% { background-position: -480px -120px; }
+}
+
+@-webkit-keyframes move {
+    0% { left: 13px; top: 15px; }
+    12.5% { left: 16px; top: 16px; }
+    25.0% { left: 24px; top: 23px; }
+    37.5% { left: 25px; top: 27px; }
+    50.0% { left: 28px; top: 29px; }
+    62.5% { left: 27px; top: 27px; }
+    75.0% { left: 24px; top: 23px; }
+    87.5% { left: 19px; top: 18px; }
+}
+
+@keyframes move {
+    0% { left: 13px; top: 15px; }
+    12.5% { left: 16px; top: 16px; }
+    25.0% { left: 24px; top: 23px; }
+    37.5% { left: 25px; top: 27px; }
+    50.0% { left: 28px; top: 29px; }
+    62.5% { left: 27px; top: 27px; }
+    75.0% { left: 24px; top: 23px; }
+    87.5% { left: 19px; top: 18px; }
+}
